@@ -1,0 +1,422 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Animation utilities */
+[data-aos="drop-bounce"] {
+  opacity: 0;
+}
+[data-aos="drop-bounce"].aos-animate {
+  animation: dropBounce 1.2s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
+}
+
+@keyframes dropBounce {
+  0% { transform: translateY(-300px); opacity: 0; }
+  50% { transform: translateY(0); opacity: 1; }
+  65% { transform: translateY(-40px); opacity: 1; }
+  80% { transform: translateY(0); opacity: 1; }
+  90% { transform: translateY(-15px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(239, 68, 68, 0.15);
+}
+
+/* Transparent fill with white stroke outline */
+.stroke-text-white {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 768px) {
+  .stroke-text-white {
+    -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.95);
+  }
+}
+
+.glow-red {
+  box-shadow: 0 0 35px rgba(255, 42, 42, 0.6);
+}
+
+/* ==========================================================================
+   Light Theme System
+   ========================================================================== */
+.light-theme {
+  color-scheme: light;
+}
+
+.light-theme body,
+.light-theme #root,
+.light-theme #portfolio-viewport {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Light Theme Scrollbar */
+.light-theme ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.light-theme ::-webkit-scrollbar-thumb {
+  background: #ef4444;
+}
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Navbar in light theme */
+.light-theme nav {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme nav a,
+.light-theme nav span.text-white {
+  color: #0f172a !important;
+}
+.light-theme nav a:hover {
+  color: #FF2A2A !important;
+}
+.light-theme nav .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #0f172a !important;
+}
+.light-theme nav .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  color: #0f172a !important;
+}
+.light-theme nav [class*="max-h-"] {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme nav [class*="max-h-"] a {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  color: #0f172a !important;
+}
+
+/* Hero Section in light theme */
+.light-theme #home {
+  background-color: #f8fafc !important;
+}
+.light-theme #home video {
+  opacity: 0.22 !important;
+  filter: brightness(1.1) grayscale(0.3) !important;
+}
+.light-theme #home .bg-gradient-to-t {
+  background: linear-gradient(to top, #f8fafc 0%, rgba(248, 250, 252, 0.65) 55%, rgba(248, 250, 252, 0.85) 100%) !important;
+}
+.light-theme #home h1,
+.light-theme #home h1 .text-white {
+  color: #0f172a !important;
+}
+.light-theme #home .stroke-text-white {
+  color: transparent !important;
+  -webkit-text-stroke: 1.8px #0f172a !important;
+}
+.light-theme #home p.text-gray-300 {
+  color: #475569 !important;
+}
+.light-theme #home p.text-gray-300 .text-white {
+  color: #0f172a !important;
+}
+.light-theme #home a[href="#projects"] {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.25) !important;
+}
+.light-theme #home a[href="#projects"] * {
+  color: #ffffff !important;
+}
+.light-theme #home a[href="/resume.pdf"] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+.light-theme aside.bg-zinc-950\/80,
+.light-theme .bg-zinc-950\/80 {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme aside.bg-zinc-950\/80 button,
+.light-theme .bg-zinc-950\/80 button {
+  color: #475569 !important;
+}
+.light-theme aside.bg-zinc-950\/80 button:hover,
+.light-theme .bg-zinc-950\/80 button:hover {
+  color: #0f172a !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.light-theme aside.bg-zinc-950\/80 button.bg-\[\#FF2A2A\],
+.light-theme .bg-zinc-950\/80 button.bg-\[\#FF2A2A\] {
+  background-color: #FF2A2A !important;
+  color: #ffffff !important;
+}
+.light-theme aside.bg-zinc-950\/80 button.bg-zinc-800,
+.light-theme .bg-zinc-950\/80 button.bg-zinc-800 {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+.light-theme aside.bg-zinc-950\/80 button.bg-amber-400,
+.light-theme .bg-zinc-950\/80 button.bg-amber-400 {
+  background-color: #f59e0b !important;
+  color: #000000 !important;
+}
+.light-theme #home .grid .bg-white\/5 {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+.light-theme #home .grid .text-white {
+  color: #0f172a !important;
+}
+.light-theme #home .grid .text-gray-400 {
+  color: #64748b !important;
+}
+
+/* Play Intro Button in light theme */
+.light-theme #home button.rounded-full.bg-black\/50 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme #home button.rounded-full.bg-black\/50 span {
+  color: #0f172a !important;
+}
+.light-theme #home .font-mono.text-gray-400 {
+  color: #64748b !important;
+}
+
+/* Resume Download Button (always keep white text over blue background) */
+#download-resume-btn,
+#download-resume-btn * {
+  color: #ffffff !important;
+}
+
+/* Experience Section in light theme */
+.light-theme #experience {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme #experience h2 {
+  color: #0f172a !important;
+}
+.light-theme #experience p.text-gray-400 {
+  color: #64748b !important;
+}
+.light-theme #experience .rounded-3xl {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.07) !important;
+}
+.light-theme #experience .rounded-3xl .text-white {
+  color: #0f172a !important;
+}
+.light-theme #experience .rounded-3xl .text-gray-300,
+.light-theme #experience .rounded-3xl .text-gray-400 {
+  color: #475569 !important;
+}
+.light-theme #experience .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme #experience .bg-white\/5 {
+  background-color: #f8fafc !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Skills Section in light theme */
+.light-theme #skills {
+  background-color: #f8fafc !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme #skills h2 {
+  color: #0f172a !important;
+}
+.light-theme #skills p.text-gray-400 {
+  color: #64748b !important;
+}
+.light-theme #skills button.bg-white\/5 {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #475569 !important;
+}
+.light-theme #skills button.bg-white\/5:hover {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+.light-theme #skills .rounded-3xl,
+.light-theme #skills .rounded-2xl {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+.light-theme #skills .rounded-3xl .text-white,
+.light-theme #skills .rounded-2xl .text-white {
+  color: #0f172a !important;
+}
+.light-theme #skills .text-gray-300,
+.light-theme #skills .text-gray-400 {
+  color: #475569 !important;
+}
+.light-theme #skills .border-white\/10,
+.light-theme #skills .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Projects Section in light theme */
+.light-theme #projects {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme #projects h2 {
+  color: #0f172a !important;
+}
+.light-theme #projects p.text-gray-400 {
+  color: #64748b !important;
+}
+.light-theme #projects .rounded-3xl {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.07) !important;
+}
+.light-theme #projects .rounded-3xl .text-white {
+  color: #0f172a !important;
+}
+.light-theme #projects .text-gray-300,
+.light-theme #projects .text-gray-400 {
+  color: #475569 !important;
+}
+.light-theme #projects .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme #projects .bg-white\/5 {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #334155 !important;
+}
+.light-theme #projects .bg-white\/5 .text-white {
+  color: #0f172a !important;
+}
+
+/* Education & Certifications Section in light theme */
+.light-theme #education {
+  background-color: #f8fafc !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme #education h2 {
+  color: #0f172a !important;
+}
+.light-theme #education p.text-gray-400 {
+  color: #64748b !important;
+}
+.light-theme #education .rounded-3xl,
+.light-theme #education .rounded-2xl {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+.light-theme #education .rounded-3xl .text-white,
+.light-theme #education .rounded-2xl .text-white {
+  color: #0f172a !important;
+}
+.light-theme #education .text-gray-300,
+.light-theme #education .text-gray-400 {
+  color: #475569 !important;
+}
+.light-theme #education .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Contact Section in light theme */
+.light-theme #contact {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme #contact h1 {
+  color: #94a3b8 !important;
+  opacity: 0.25 !important;
+}
+
+/* Footer Section in light theme */
+.light-theme footer {
+  background-color: #e2e8f0 !important;
+  color: #334155 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+.light-theme footer .text-white {
+  color: #0f172a !important;
+}
+.light-theme footer .text-gray-300 {
+  color: #334155 !important;
+}
+.light-theme footer .text-gray-400 {
+  color: #64748b !important;
+}
+.light-theme footer .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+.light-theme footer .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme footer .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.light-theme footer a:hover {
+  color: #FF2A2A !important;
+}
+
+

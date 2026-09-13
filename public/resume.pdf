@@ -1,0 +1,151 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 2556 >>
+stream
+BT
+/F2 20 Tf
+50 740 Td
+(VAISHALI A.) Tj
+ET
+BT
+/F1 10.5 Tf
+50 722 Td
+(Software Engineer | Python & Backend Developer | BTech IT '26) Tj
+ET
+BT
+/F1 9 Tf
+50 706 Td
+(Email: vaishali240905@gmail.com | Location: Vellore, Tamil Nadu) Tj
+ET
+BT
+/F2 12 Tf
+50 675 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+BT
+/F1 9.5 Tf
+50 658 Td
+(Passionate Software Engineer specializing in Python, SQL, and software architecture. Experienced) Tj
+0 -13 Td
+(in building static code analysis engines, dependency graphs, relational database modeling, and) Tj
+0 -13 Td
+(scalable web applications.) Tj
+ET
+BT
+/F2 12 Tf
+50 605 Td
+(TECHNICAL SKILLS) Tj
+ET
+BT
+/F1 9.5 Tf
+50 588 Td
+(Languages: Python, SQL, C, HTML5, CSS3, JavaScript) Tj
+0 -13 Td
+(Frameworks & Libraries: Flask, NetworkX, Pandas, AST (Abstract Syntax Trees)) Tj
+0 -13 Td
+(Databases & Tools: MySQL, SQLite, Git, GitHub, VS Code, PyCharm, Postman) Tj
+0 -13 Td
+(Core Competencies: Data Structures & Algorithms, OOP, Database Management Systems, OS) Tj
+ET
+BT
+/F2 12 Tf
+50 515 Td
+(FEATURED PROJECTS) Tj
+ET
+BT
+/F2 10.5 Tf
+50 498 Td
+(1. Software Change Impact & Risk Analysis Platform (Jan 2026 - Apr 2026)) Tj
+ET
+BT
+/F1 9.5 Tf
+50 484 Td
+(- Built a Python static code analysis platform parsing AST to construct dependency DAGs.) Tj
+0 -13 Td
+(- Implemented rule-based risk scoring (Low, Medium, High) with 100% impact accuracy.) Tj
+0 -13 Td
+(- Generated automated risk assessment reports for developer code reviews and PR auditing.) Tj
+ET
+BT
+/F2 10.5 Tf
+50 430 Td
+(2. Workforce Intelligence & Management Platform) Tj
+ET
+BT
+/F1 9.5 Tf
+50 416 Td
+(- Engineered custom Heap data structure for efficient shift priority scheduling.) Tj
+0 -13 Td
+(- Implemented normalized schema with ACID transaction safety and audit logs.) Tj
+ET
+BT
+/F2 12 Tf
+50 375 Td
+(PRACTICAL SIMULATION EXPERIENCE) Tj
+ET
+BT
+/F2 10.5 Tf
+50 358 Td
+(Walmart Global Tech - Advanced Software Engineering Simulation (Aug 2025)) Tj
+ET
+BT
+/F1 9.5 Tf
+50 344 Td
+(- Architected custom Min/Max Heap data structure in Python from scratch.) Tj
+0 -13 Td
+(- Modeled relational database schema with complex entity relationships.) Tj
+0 -13 Td
+(- Implemented data ingestion pipeline handling large-scale data feeds.) Tj
+ET
+BT
+/F2 12 Tf
+50 285 Td
+(EDUCATION & CERTIFICATIONS) Tj
+ET
+BT
+/F2 10 Tf
+50 268 Td
+(BTech in Information Technology | CGPA: 8.30 / 10.0 (2022 - 2026)) Tj
+ET
+BT
+/F1 9 Tf
+50 254 Td
+(C. Abdul Hakeem College of Engineering and Technology, Vellore) Tj
+ET
+BT
+/F1 9 Tf
+50 236 Td
+(Certifications: Python Essentials (Cisco) | SQL for Data Science (UC Davis) | Intro to SE (IBM)) Tj
+ET
+
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3004
+%%EOF
